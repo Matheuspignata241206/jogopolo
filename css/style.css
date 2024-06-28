@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game-board {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('./img/background.png') no-repeat center center;
+    background-size: cover;
+}
+
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.blob {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    /* Adicione mais estilos conforme necessário */
+}
+
+.pipe {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    /* Adicione animação de movimento */
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 150px; } /* altura do pulo */
+    100% { bottom: 0; }
+}
+
+.jump {
+    animation: jump 0.5s;
+}
